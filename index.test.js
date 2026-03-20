@@ -1,5 +1,9 @@
 const compareWords = require("./index");
 
+/*
+Jag funderade och planerade enligt fyrstegsmodellen och när jag började bryta ner uppgiften i mindre delar så började jag tänka utifrån vilka tester som behövdes för att kontrollera att koden uppför sig som jag vill. Det blev då naturligt att börja med att kontrollera att output levererar "korrekt" som resultat på varje bokstav. Sen jobbade jag mig vidare bit för bit (skriva test --> skriva kod --> klara test --> skriva nytt test --> etc) genom att skriva tester för alla olika scenarion jag kunde komma på.
+*/
+
 test("should return correct for the word HEJ", () => {
   let expectedOutput = [
     { letter: "H", result: "correct" },
