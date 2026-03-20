@@ -22,7 +22,7 @@ test("should return incorrect for the word HEJ when guessing BIL", () => {
   expect(compareWords("BIL", "HEJ")).toEqual(expectedOutput);
 });
 
-test("should return error if input is in small letters", () => {
+test("should always return output in uppercase letters", () => {
   let expectedOutput = [
     { letter: "H", result: "correct" },
     { letter: "E", result: "correct" },
@@ -51,10 +51,10 @@ test("should return misplaced for correct letter in the wrong place", () => {
 test("should return misplaced for only the first occurrence of a letter if target has fewer instances", () => {
   let expectedOutput = [
     { letter: "H", result: "incorrect" },
-    { letter: "A", result: "incorrect" },
-    { letter: "L", result: "misplaced" },
+    { letter: "A", result: "misplaced" },
     { letter: "L", result: "incorrect" },
+    { letter: "L", result: "correct" },
     { letter: "Å", result: "incorrect" },
   ];
-  expect(compareWords("HALLÅ", "SLOTT")).toEqual(expectedOutput);
+  expect(compareWords("HALLÅ", "CYKLA")).toEqual(expectedOutput);
 });
